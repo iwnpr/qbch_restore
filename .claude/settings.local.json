@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -E 's/^\\(\\\\[[^]]+\\\\][^:]*\\).*/\\\\1/')",
+      "Bash(awk -F: '{print $1}')",
+      "Bash(awk '{ if \\($2 != $1+1\\) c++ } END { print \"пар, где RequestId НЕ на строке start+1:\", c+0 }')",
+      "Bash(awk '{ if \\($2 != $1+1\\) print \"start=\"$1\" req=\"$2 }')",
+      "Bash(dotnet --version)",
+      "Bash(dotnet build *)",
+      "Bash(time dotnet *)",
+      "Bash(chcp.com 65001)",
+      "Bash(dotnet bin/Debug/net8.0/qbch_request_restore.dll stage1)",
+      "Bash(dotnet bin/Debug/net8.0/qbch_request_restore.dll stage3)"
+    ]
+  }
+}
