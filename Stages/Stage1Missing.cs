@@ -12,7 +12,7 @@ public static class Stage1Missing
 {
     // QBCH:dlrequest:<guid> внутри сообщения "Не удалось найти ключ в кеше"
     private static readonly Regex MissingKeyRegex = new(
-        @"Не удалось найти ключ в кеше\s+""QBCH:dlrequest:(?<guid>[0-9a-fA-F-]+)""",
+        @"Не удалось найти ключ в кеше\s+""?QBCH:dlrequest:(?<guid>[0-9a-fA-F-]+)""?",
         RegexOptions.Compiled);
 
     public static void Run(string saverLogsDir, string missingTxtPath, RestoreDb db)

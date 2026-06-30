@@ -31,11 +31,11 @@ public static class Stage3BuildAndPush
         Console.WriteLine($"[stage3]   связка есть, но нет XML: {noXml}");
 
         // Зафиксируем причины для нерешённых
-        foreach (var row in rows.Where(r => r.RequestXml is null))
-        {
-            var status = row.RequestId is null ? "no_link" : "no_xml";
-            db.UpsertRestore(row.TransactionId, row.RequestId, status, null, null);
-        }
+        //foreach (var row in rows.Where(r => r.RequestXml is null))
+        //{
+        //    var status = row.RequestId is null ? "no_link" : "no_xml";
+        //    db.UpsertRestore(row.TransactionId, row.RequestId, status, null, null);
+        //}
 
         if (matched.Count > 0)
             PrintPreview(matched[0]);

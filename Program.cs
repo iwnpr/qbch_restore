@@ -12,8 +12,8 @@ var configuration = new ConfigurationBuilder()
 var config = AppConfig.Load(configuration);
 
 // Разбор аргументов: <stage> [--push]
-var stage = args.Length > 0 ? args[0].ToLowerInvariant() : "help";
-var push = args.Contains("--push", StringComparer.OrdinalIgnoreCase);
+var stage = "stage3"; //args.Length > 0 ? args[0].ToLowerInvariant() : "help";
+var push = true; // args.Contains("--push", StringComparer.OrdinalIgnoreCase);
 
 using var db = new RestoreDb(config.DbPath);
 
